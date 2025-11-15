@@ -23,8 +23,11 @@ This project implements production-grade hardening steps including:
 ```bash
 chmod +x src/manual-hardening-ubuntu24.sh
 ```
+
 ### 2. Run
-´´´bash
+
+```bash
 sudo ./src/manual-hardening-ubuntu24.sh
-´´´
+```
+
 - Backups stored at "/root/hardening-backups-YYYYMMDDHHMMSS"

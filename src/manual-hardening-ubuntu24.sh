@@ -7,6 +7,8 @@
 # NOTE (SAFETY): This script attempts to be safe and idempotent.
 # - It WILL NOT disable SSH password authentication if you are connected via SSH and no authorized key is detected.
 # - Review the script before running on production systems.
+
+
 set -euo pipefail
 
 # Configuration (tweakable)
@@ -23,7 +25,7 @@ PW_WARN_AGE=14
 PW_MINLEN=12
 # -------------------------
 
-echo "=== Ubuntu 24+ Manual Hardening — START ==="
+echo "Ubuntu 24+ Manual Hardening — START"
 echo "Backup directory: $BACKUP_DIR"
 mkdir -p "$BACKUP_DIR"
 
@@ -72,7 +74,7 @@ else
   ufw --force enable
 fi
 
-# 4) SSH hardening (with safety)
+# 4) SSH hardening
 SSH_CONF="/etc/ssh/sshd_config"
 echo "[4/12] Hardening SSH configuration..."
 
